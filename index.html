@@ -2,9 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <title>Assignment-1: Christian Barrera</title>
   </head>
-  <body>
-    <h1>Comidas del dia</h1>
+  <body ng-app="LunchCheck">
+    <div ng-controller="LunchCheckController">
+      <h1>Comidas del Almuerzo</h1>
+      <div class="">
+        Ingrese comidas del almuerzo separadas por comas:
+        <input type="text" ng-model="comidasDia">
+      </div>
+      <br>
+      <div class="">
+        <input type="button" value="Verificar si hay demasiado" ng-click="setMensaje();">
+      </div>
+      <br>
+      <div>
+        RESPUESTA: <p style="color:{{colorMensaje}};"><b>{{mensaje}}</b></p>
+      </div>
+    </div>
   </body>
 </html>
