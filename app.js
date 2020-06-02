@@ -26,7 +26,7 @@ function LunchCheckController($scope, $filter) {
       tamanioVector = vector.length;
       for (var i=0;i<tamanioVector;i++){
         cadena = vector[i];
-        cadena = cadena.trim();
+        cadena = cadena.replace(/^\s+|\s+$/gm,'');
         if (!!cadena)
           n+=1;
       }
