@@ -17,7 +17,7 @@ function LunchCheckController($scope, $filter) {
     $scope.mensaje = respuestas[1];
   };
 
-  function contarCadenasSeparadasPorComa(string){ //count no empties strings separate for , 
+  function contarCadenasSeparadasPorComa(string){ //count no empties strings separate for ,
     var tamanioVector = 0;
     var vector = string.split(",")
     var n = 0;
@@ -26,6 +26,7 @@ function LunchCheckController($scope, $filter) {
       tamanioVector = vector.length;
       for (var i=0;i<tamanioVector;i++){
         cadena = vector[i];
+        cadena = cadena.trim();
         if (!!cadena)
           n+=1;
       }
