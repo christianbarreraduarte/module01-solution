@@ -8,18 +8,20 @@
   </head>
   <body ng-app="LunchCheck">
     <div ng-controller="LunchCheckController">
-      <h1>Comidas del Almuerzo</h1>
+      <h1>Lunch Check</h1>
       <div class="">
-        Ingrese comidas del almuerzo separadas por comas:
-        <input type="text" ng-model="comidasDia">
+        items usually eat for lunch:
+        <input type="text"
+        ng-model="comidasDia"
+        style="border-color:{{colorMensaje}}">(NOT consider an empty item, i.e., ', ,' as an item towards to the count)
       </div>
       <br>
       <div class="">
-        <input type="button" value="Verificar si hay demasiado" ng-click="setMensaje();">
+        <input type="button" value="Check If Too Much" ng-click="setMensaje();">
       </div>
       <br>
       <div>
-        RESPUESTA: <p style="color:{{colorMensaje}};"><b>{{mensaje}}</b></p>
+        REPLY MESSAGE: <p style="color:{{colorMensaje}};"><b>{{mensaje}}</b></p>
       </div>
     </div>
   </body>
